@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANNESI</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <h1>ANNESI: Artifical neural network for estuarine salt intrusion</h1>
+    <p style="color:red; font-weight: bold;">WARNING: Neural network and web-page are still in development!</p>
+    <h2>Input data</h2>
+    <div class="slider-grid">
+        <!-- tidal range -->
+        <div class="slider-box">
+            <label for="sliderTidalRange" id="labelTidalRange"></label><br>
+            <input type="range" id="sliderTidalRange" class="slider" min="1" max="5" step=".1" value="3">
+        </div>
+        
+        <!-- storm surge level -->
+        <div class="slider-box">
+            <label for="sliderSurgeLevel" id="labelSurgeLevel"></label><br>
+            <input type="range" id="sliderSurgeLevel" class="slider" min="0" max="2" step=".1" value="1.0">
+        </div>
+        
+        <!-- river discharge -->
+        <div class="slider-box">
+            <label for="sliderRiverDischarge" id="labelRiverDischarge"></label><br>
+            <input type="range" id="sliderRiverDischarge" class="slider" min="100" max="16000" step="50" value="1000">
+        </div>
+        
+        <!-- channel depth -->
+        <div class="slider-box">
+            <label for="sliderChannelDepth" id="labelChannelDepth"></label><br>
+            <input type="range" id="sliderChannelDepth" class="slider" min="5" max="25" step=".1" value="15">
+        </div>
+        
+        <!-- channel width -->
+        <div class="slider-box">
+            <label for="sliderChannelWidth" id="labelChannelWidth"></label><br>
+            <input type="range" id="sliderChannelWidth" class="slider" min="500" max="3000" step="50" value="1500">
+        </div>
+        
+        <!-- channel friction -->
+        <div class="slider-box">
+            <label for="sliderChannelFriction" id="labelChannelFriction"></label><br>
+            <input type="range" id="sliderChannelFriction" class="slider" min=".02" max=".05" step=".001" value=".023">
+        </div>
+        
+        <!-- convergence -->
+        <div class="slider-box">
+            <label for="sliderConvergence" id="labelConvergence"></label><br>
+            <input type="range" id="sliderConvergence" class="slider" min="2.5e-5" max="4e-4" step="1e-6" value="1e-4">
+        </div>
+        
+        <!-- flat depth ratio -->
+        <div class="slider-box">
+            <label for="sliderFlatDepthRatio" id="labelFlatDepthRatio"></label><br>
+            <input type="range" id="sliderFlatDepthRatio" class="slider" min="-1" max="1" step=".1" value="0">
+        </div>
+        
+        <!-- flat width -->
+        <div class="slider-box">
+            <label for="sliderFlatWidth" id="labelFlatWidth"></label><br>
+            <input type="range" id="sliderFlatWidth" class="slider" min="0" max="3000" step="50" value="0">
+        </div>
+        
+        <!-- flat friction -->
+        <div class="slider-box">
+            <label for="sliderFlatFriction" id="labelFlatFriction"></label><br>
+            <input type="range" id="sliderFlatFriction" class="slider" min=".02" max=".05" step=".001" value=".023">
+        </div>
+        
+        <!-- bottom curvature -->
+        <div class="slider-box">
+            <label for="sliderBottomCurvature" id="labelBottomCurvature"></label><br>
+            <input type="range" id="sliderBottomCurvature" class="slider" min="0" max="6e-5" step="1e-6" value="0">
+        </div>
+        
+        <!-- meander amplitude -->
+        <div class="slider-box">
+            <label for="sliderMeanderAmplitude" id="labelMeanderAmplitude"></label><br>
+            <input type="range" id="sliderMeanderAmplitude" class="slider" min="0" max="6000" step="50" value="0">
+        </div>
+        
+        <!-- meander length -->
+        <div class="slider-box">
+            <label for="sliderMeanderLength" id="labelMeanderLength"></label><br>
+            <input type="range" id="sliderMeanderLength" class="slider" min="0" max="10000" step="100" value="0">
+        </div>
+    </div>
+
+    <h2>Output data</h2>
+    <div style="color:red; font-weight: bold;">
+        <warning id="warningCheck"></warning>
+    </div>
+    <div class="slider-box">
+        <output id="saltIntrusionLength"></output>
+    </div><br>
+
+    <h2>Visualisation</h2>
+    <div class="visuals-grid">
+        <div class="dropdown">
+            <button class="dropdown-button" id="visualParameter" value="salinity"></button>
+            <div class="dropdown-content">
+                <p onclick="setVisualParam('salinity')">salinity</p>
+                <p onclick="setVisualParam('bathymetry')">bathymetry</p>
+            </div>
+        </div>
+        <!-- displayed estuary length -->
+        <div class="slider-box">
+            <label for="sliderEstuaryLength" id="labelEstuaryLength"></label><br>
+            <input type="range" id="sliderEstuaryLength" class="slider" min="1000" max="2e5" step="1000" value="1e4">
+        </div>
+    </div><br>
+    <svg width="1000" height="500"></svg>
+</body>
+</html>

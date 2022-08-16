@@ -1,0 +1,114 @@
+body {
+    margin: 1%;
+}
+
+/* https://stackoverflow.com/questions/69182720/how-to-change-slider-color-according-to-percentage */
+/* Slider-settings */
+.slider {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 5px;
+    border-radius: 10px;
+    background: black;
+    outline: none;
+    opacity: .5;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+}
+
+.slider-box {
+    min-width: 240px;
+    display: inline-block;
+    padding: 5px;
+}
+
+/* Grid-settings */
+.slider-grid {
+    --gap: 15px;
+    --num-cols: 3;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    /* gap: var(--gap); */
+}
+
+.visuals-grid {
+    --gap: 15px;
+    --num-cols: 2;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+}
+
+/* Dropdown-settings */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: darkblue;
+    min-width: 90%;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: darkblue;
+    min-width: 90%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.dropdown-content p {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content p:hover {
+    color: darkblue;
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: black;
+}
+
+/* Anything under 1024px */
+@media screen and (max-width: 1024px) {
+    .slider-grid {
+        --num-cols: 2;
+    }
+}
+
+/* Anything under 512px */
+@media screen and (max-width: 512px) {
+    .slider-grid {
+        --num-cols: 1;
+    }
+}
