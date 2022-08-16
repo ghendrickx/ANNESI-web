@@ -13,7 +13,7 @@ analysis, a neural network has been trained to the elaborate data set created, c
 This neural network is available as a stand-alone piece of code in `Python` for which the home-repository of 
 [ANNESI](https://github.com/ghendrickx/ANNESI) should be consulted. This repository contains the `JavaScript`-code to
 allow hosting this neural network as a static web-page, functioning as a static web-API, which is hosted on the website
-of [SALTISolutions](); the research program of which this PhD research is part of.
+of [SALTISolutions](); the research program which this PhD research is part of.
 
 ## Usage
 The easiest way of using this web-API is by visiting the hosting website of [SALTISolutions](). Otherwise, this
@@ -44,7 +44,7 @@ Gijs G. Hendrickx
 [![alt text](https://camo.githubusercontent.com/e1ec0e2167b22db46b0a5d60525c3e4a4f879590a04c370fef77e6a7e00eb234/68747470733a2f2f696e666f2e6f726369642e6f72672f77702d636f6e74656e742f75706c6f6164732f323031392f31312f6f726369645f31367831362e706e67) 0000-0001-9523-7657](https://orcid.org/0000-0001-9523-7657)
 (Delft University of Technology).
 
-Contact: [G.G.Hendrickx@tudelft.nl](mailto:G.G.Hendrickx@tudelft.nl?subject=[GitHub]%20ANNESI).
+Contact: [G.G.Hendrickx@tudelft.nl](mailto:G.G.Hendrickx@tudelft.nl?subject=[GitHub]%20ANNESI-web).
 
 ## References
 When using this repository, please cite accordingly:
