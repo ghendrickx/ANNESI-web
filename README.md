@@ -15,6 +15,30 @@ This neural network is available as a stand-alone piece of code in `Python` for 
 allow hosting this neural network as a static web-page, functioning as a static web-API, which is hosted on the website
 of [SALTISolutions](); the research program of which this PhD research is part of.
 
+## Usage
+The easiest way of using this web-API is by visiting the hosting website of [SALTISolutions](). Otherwise, this
+repository can be downloaded and the web-page can be launched, i.e. [`index.html`](./index.html).
+
+## Structure
+The essential pieces of code for the web-API are located in the [`src`](./src)-folder, and the data reflecting the
+neural network itself is stored as `*.onnx`-file in the [`_data`](./_data)-folder:
+```
++-- _data/
+|   +-- annesi.onnx
++-- src/
+|   +-- check.js
+|   +-- config.js
+|   +-- display.js
+|   +-- exec.js
+|   +-- model.js
+|   +-- visuals.js
++-- index.html
++-- LICENSE
++-- main.css
++-- main.js
++-- README.md
+```
+
 ## Author
 Gijs G. Hendrickx 
 [![alt text](https://camo.githubusercontent.com/e1ec0e2167b22db46b0a5d60525c3e4a4f879590a04c370fef77e6a7e00eb234/68747470733a2f2f696e666f2e6f726369642e6f72672f77702d636f6e74656e742f75706c6f6164732f323031392f31312f6f726369645f31367831362e706e67) 0000-0001-9523-7657](https://orcid.org/0000-0001-9523-7657)
@@ -33,4 +57,3 @@ repository.
 
 ## License
 This repository is licensed under [`Apache License 2.0`](LICENSE).
-
