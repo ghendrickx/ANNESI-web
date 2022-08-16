@@ -23,14 +23,14 @@ loadScript('https://d3js.org/d3.v7.min.js');
 // load ONNX-module
 loadScript('https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js');
 // load configuration-file
-loadScript('./js/config.js');
+loadScript('./src/config.js');
 // load display-functions
-loadScript('./js/display.js');
+loadScript('./src/display.js');
 // load input check
-loadScript('./js/check.js');
+loadScript('./src/check.js');
 // load ANNESI-model
-loadScript('./js/model.js');
+loadScript('./src/model.js');
 // load visualisations
-loadScript('./js/visuals.js');
+loadScript('./src/visuals.js');
 // load execution-file
-loadScript('./js/exec.js');
+loadScript('./src/exec.js');
