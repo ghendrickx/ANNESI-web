@@ -380,6 +380,13 @@ function lineColor(index, visualParam)
     }
 }
 
+/**
+ * Make the salt intrusion mark invisible when it exceeds the width of the SVG.
+ * @param {Array<Number>} data line-data
+ * @param {Number} index line-data index
+ * @param {Number} svgWidth width of SVG
+ * @returns {Number} line opacity
+ */
 function lineOpacity(data, index, svgWidth)
 {
     if ((index === 0) && (data[0].x > mainPlotWidth(svgWidth))) {
