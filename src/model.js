@@ -22,8 +22,7 @@ async function runModel()
     const outputTensor = outputMap.values().next().value;
 
     // return output
-    // TODO: update the hard-coded multiplication by 80 (remedy of "old" ANNESI)
-    return 80 * outputTensor.data[0];
+    return 200 * outputTensor.data[0];
 }
 
 /**
