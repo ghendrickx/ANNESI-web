@@ -15,7 +15,7 @@ async function runModel()
 
     // initiate ONNX-session
     const session = new onnx.InferenceSession();
-    await session.loadModel('./_data/annesi.onnx');
+    await session.loadModel('./src/_data/annesi.onnx');
 
     // execute ANNESI
     const outputMap = await session.run([input]);
