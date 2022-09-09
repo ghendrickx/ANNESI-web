@@ -380,6 +380,16 @@ function lineColor(index, visualParam)
     }
 }
 
+function lineOpacity(data, index, svgWidth)
+{
+    if ((index === 0) && (data[0].x > mainPlotWidth(svgWidth))) {
+        // salt intrusion length beyond SVG
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
 // FIGURE AXES
 /**
  * Create a linearly scaled x-axis.
@@ -493,6 +503,7 @@ function renderVisuals(selection, colourBar, axes, data)
         .attr('d', line)
         .attr('fill', 'none')
         .attr('stroke', function(d, i) { return lineColor(i, visualParam); })
+        .style('opacity', function(d, i) { return lineOpacity(d, i, svgWidth); })
         .attr('stroke-width', 2);
     lines
         .transition()
@@ -500,6 +511,7 @@ function renderVisuals(selection, colourBar, axes, data)
         .attr('d', line)
         .attr('fill', 'none')
         .attr('stroke', function(d, i) { return lineColor(i, visualParam); })
+        .style('opacity', function(d, i) { return lineOpacity(d, i, svgWidth); })
         .attr('stroke-width', 2);
     lines
         .exit()
