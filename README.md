@@ -20,7 +20,7 @@ Otherwise, this repository can be downloaded and the web-page can be launched lo
 
 ## Structure
 The essential pieces of code for the web-API are located in the [`src`](./src)-folder, including the data reflecting the
-neural network itself, which is stored as `*.onnx`-file in the [`_data`](./src/_data)-folder:
+neural network itself, which is stored as [`*.onnx`](https://onnx.ai/)-file in the [`_data`](./src/_data)-folder:
 ```
 +-- src/
 |   +-- _data/
