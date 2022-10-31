@@ -12,7 +12,8 @@ with [Delft3D Flexible Mesh](https://www.deltares.nl/en/software/delft3d-flexibl
 
 The neural network is available as a stand-alone piece of code in `Python` for which the home-repository of 
 [ANNESI](https://github.com/ghendrickx/ANNESI) should be consulted. This repository contains the `JavaScript`-code to
-allow hosting this neural network as a [web-API](https://annesi-web.netlify.app/), which is hosted with `netlify`.
+allow hosting this neural network as a [web-API](https://annesi-web.netlify.app/), which is hosted with 
+[`netlify`](https://www.netlify.com/).
 
 ## Usage
 The easiest way of using this web-API is by visiting the hosting website: [ANNESI-web](https://annesi-web.netlify.app/). 
