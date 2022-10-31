@@ -16,7 +16,7 @@ allow hosting this neural network as a [web-API](https://annesi-web.netlify.app/
 
 ## Usage
 The easiest way of using this web-API is by visiting the hosting website: [ANNESI-web](https://annesi-web.netlify.app/). 
-Otherwise, this repository can be downloaded and the web-page can be launched, i.e. [`index.html`](./index.html).
+Otherwise, this repository can be downloaded and the web-page can be launched locally, i.e. [`index.html`](./index.html).
 
 ## Structure
 The essential pieces of code for the web-API are located in the [`src`](./src)-folder, including the data reflecting the
