@@ -16,7 +16,7 @@ async function updateHTML(parameter)
     let output = await runModel();
 
     // format output
-    outputText = `Salt intrusion length: ${roundValue(output, 1)} [km]`;
+    outputText = `Salt intrusion length: <font color=darkblue><b>${roundValue(output, 1)}</b></font> [km]`;
     
     // update visuals
     document.getElementById('saltIntrusionLength').value = +output;
